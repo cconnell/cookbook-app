@@ -1,0 +1,16 @@
+<h1>Cookbook</h1>
+
+<%= link_to "Add a new recipe", "/recipes/new" %>
+
+<% @recipes.each do |recipe| %>
+  <h2><a href="/recipes/<%= recipe.id %>"><%= recipe.title %></a></h2>
+  <h3><%= recipe.chef %></h3>
+  <h3><%= recipe.ingredients %></h3>
+  <h3><%= recipe.directions %></h3>
+
+<%= link_to "Home", "/" %>
+<%= link_to "Edit", "/recipes/#{recipe.id}/edit" %>
+<%= link_to "Delete", "/recipes/#{recipe.id}",
+method: :delete, data:{confirm: "Are you sure?"} %>
+  <hr>
+<% end %>
