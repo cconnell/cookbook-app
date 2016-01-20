@@ -11,8 +11,10 @@ class RecipesController < ApplicationController
   def new
   end
 
- def show
+  def show
     @recipe = Recipe.find(params[:id])
+    @ingredient_list = @recipe.ingredient_list
+    @directions_list = @recipe.directions_list
   end
 
   def create
@@ -24,7 +26,7 @@ class RecipesController < ApplicationController
     flash[:success] = "New Recipe Created"
     
     redirect_to "/"
-end
+  end
 
   def edit
     @recipe = Recipe.find(params[:id])
