@@ -21,7 +21,8 @@ class RecipesController < ApplicationController
     @recipe = Recipe.create( {title: params[:title],
                               chef: params[:chef], 
                               ingredients: params[:ingredients], 
-                              directions: params[:directions]
+                              directions: params[:directions],
+                              image: params[:image], preptime: params[:preptime]
                               })
     flash[:success] = "New Recipe Created"
     
@@ -39,7 +40,8 @@ class RecipesController < ApplicationController
                               title: params[:title],
                               chef: params[:chef],
                               ingredients: params[:ingredients],
-                              directions: params[:directions]
+                              directions: params[:directions],
+                              image: params[:image], preptime: params[:preptime]
 
       })
     flash[:success] = "Recipe Updated"

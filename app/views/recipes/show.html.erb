@@ -1,4 +1,4 @@
-<h1><%= @recipe.title %></h1>
+ <h1><%= @recipe.title %></h1>
 <h2>By: <%= @recipe.chef %></h2>
 <h4>Updated on: <%= @recipe.updated_at %></h4>
 
@@ -6,7 +6,7 @@
 
 <h3>Ingredients:</h3>
 <ul>
-<% @ingredient_list.each do |ingredient| %>
+  <% @ingredient_list.each do |ingredient| %>
   <li><%= ingredient %></li>
   <% end %>
 </ul>
@@ -19,8 +19,9 @@
 </ol>
 
 <%= image_tag @recipe.image %>
-
-<%= link_to "Home", "/" %>
-<%= link_to "Edit", "recipes/#{@recipe.id}/edit" %>
-<%= link_to "Delete", "recipes/#{@recipe.id}",
-method: :delete, data:{confirm: "Are you sure?"} %>
+<div>
+  <%= link_to "Home", "/" %>
+  <%= link_to "Edit", "/recipes/#{@recipe.id}/edit" %>
+  <%= link_to "Delete", "/recipes/#{@recipe.id}",
+  method: :delete, data:{confirm: "Are you sure?"} %>
+</div>

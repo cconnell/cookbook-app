@@ -2,23 +2,33 @@
 
 <%= form_tag '/recipes', method: :post do %>
   <div>
-  <%=label_tag :title %>
-  <%= text_field_tag :title %>
+    <%=label_tag :title %>
+    <%= text_field_tag :title %>
   </div>
 
   <div>
-  <%=label_tag :chef %>
-  <%= text_field_tag :chef %>
+    <%=label_tag :chef %>
+    <%= text_field_tag :chef %>
   </div>
 
   <div>
-  <%=label_tag :ingredients %>
-  <%= text_field_tag :ingredients %>
+    <%= label_tag :preptime %>
+    <%= text_field_tag :preptime %>
   </div>
 
   <div>
-  <%=label_tag :directions %>
-  <%= text_field_tag :directions %>
+    <%=label_tag :ingredients %>
+    <%= text_field_tag :ingredients %>
+  </div>
+
+  <div>
+    <%=label_tag :directions %>
+    <%= text_field_tag :directions %>
+  </div>
+
+  <div>
+    <%=label_tag :image %>
+    <%= text_field_tag :image %>
   </div>
 
 <%= submit_tag "Punch It!!!" %>
