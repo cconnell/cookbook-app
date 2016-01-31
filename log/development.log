@@ -15018,3 +15018,44 @@ Completed 200 OK in 100ms (Views: 98.5ms | ActiveRecord: 0.4ms)
 
 
 Started GET "/assets/purty_wood_@2X.png" for ::1 at 2016-01-26 20:31:13 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mRecipe Load (2.2ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.4ms)[0m  DELETE FROM "recipes" WHERE "recipes"."id" = ?  [["id", 20]]
+  [1m[36m (3.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "recipes" WHERE "recipes"."id" = ?[0m  [["id", 21]]
+  [1m[35m (3.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "recipes" WHERE "recipes"."id" = ?  [["id", 22]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "recipes" WHERE "recipes"."id" = ?[0m  [["id", 23]]
+  [1m[35m (8.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "recipes" WHERE "recipes"."id" = ?  [["id", 24]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "recipes" WHERE "recipes"."id" = ?[0m  [["id", 25]]
+  [1m[35m (9.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "recipes" WHERE "recipes"."id" = ?  [["id", 38]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "recipes" ("title", "chef", "ingredients", "directions", "image", "preptime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Raw Eggs"], ["chef", "Laura Parsley"], ["ingredients", "Chicken"], ["directions", "Squeeze the chicken"], ["image", "http://swansonhealthcenter.com/wp-content/uploads/2011/07/Egg.jpg"], ["preptime", "1"], ["created_at", "2016-01-31 16:43:15.575952"], ["updated_at", "2016-01-31 16:43:15.575952"]]
+  [1m[35m (12.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("title", "chef", "ingredients", "directions", "image", "preptime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Empty Sandwich"], ["chef", "Jay Wengrow"], ["ingredients", "Two slices of bread"], ["directions", "Place slices of bread next to each other."], ["image", "http://www.phoenixisstrategic.com/wp-content/uploads/2013/05/blog-empty-sandwich.jpg"], ["preptime", "72"], ["created_at", "2016-01-31 16:43:15.593019"], ["updated_at", "2016-01-31 16:43:15.593019"]]
+  [1m[36m (14.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "recipes" ("title", "chef", "ingredients", "directions", "image", "preptime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Licorice"], ["chef", "Jean Claude Packsone"], ["ingredients", "Licorice"], ["directions", "Buy licroice from store."], ["image", "http://www.seelecttea.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/i/licorice1.jpg"], ["preptime", "120"], ["created_at", "2016-01-31 16:43:15.609698"], ["updated_at", "2016-01-31 16:43:15.609698"]]
+  [1m[35m (7.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("title", "chef", "ingredients", "directions", "image", "preptime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Mud Pie"], ["chef", "Mark Richardson"], ["ingredients", "Flour, water, mud."], ["directions", "Mix flour and water, add mud, bake at 350 degrees for 1 hour."], ["image", "http://cdn-image.myrecipes.com/sites/default/files/styles/300x300/public/image/recipes/sl/05/12/mocha-mud-pie-sl-257949-x.jpg?itok=_ChocANl"], ["preptime", "84"], ["created_at", "2016-01-31 16:43:15.619436"], ["updated_at", "2016-01-31 16:43:15.619436"]]
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "recipes" ("title", "chef", "ingredients", "directions", "image", "preptime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Pizza"], ["chef", "The Swedish Chef"], ["ingredients", "Flour, water, pepperoni, cheese"], ["directions", "Mix flour and water, add cheese and pepperoni, shape as a heart, bake in oven on self-clean mode."], ["image", "http://twopizzapals.weebly.com/uploads/2/3/6/0/23602608/1338890_orig.jpg"], ["preptime", "455"], ["created_at", "2016-01-31 16:43:15.627577"], ["updated_at", "2016-01-31 16:43:15.627577"]]
+  [1m[35m (3.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("title", "chef", "ingredients", "directions", "image", "preptime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "Corn on the cob"], ["chef", "Cornelius Vanderbilt"], ["ingredients", "Corn, cob"], ["directions", "Place corn on the cob, grill for 20 minutes, enjoy!"], ["image", "http://www.scientificamerican.com/sciam/cache/file/59C0122F-509C-4FEE-99A67FC20C50CEF1.jpg"], ["preptime", "22"], ["created_at", "2016-01-31 16:43:15.633553"], ["updated_at", "2016-01-31 16:43:15.633553"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
