@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get '/meal' => 'recipes#meal' 
 
-  get '/recipes' => 'recipes#index'
+  devise_for :users
+  root 'recipes#index'
+  
   get '/' => 'recipes#index'
 
   get '/recipes/new' => 'recipes#new'
